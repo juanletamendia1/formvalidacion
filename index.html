@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formulario de Transacción</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulario de Transacción</h1>
+
+      <form id="transaction-form">
+        <label for="transaction-type">Tipo de Transacción:</label>
+        <select id="transaction-type" name="transaction-type">
+          <option value="CASH_IN">CASH IN</option>
+          <option value="TRANSFER">TRANSFERENCIA</option>
+        </select>
+
+        <br />
+
+        <label for="amount">Monto:</label>
+        <input type="number" id="amount" name="amount" />
+
+        <br />
+
+        <label for="initial-balance-orig">Balance Inicial Original:</label>
+        <input
+          type="number"
+          id="initial-balance-orig"
+          name="initial-balance-orig"
+        />
+
+        <br />
+
+        <label for="initial-balance-dest">Balance Inicial Destino:</label>
+        <input
+          type="number"
+          id="initial-balance-dest"
+          name="initial-balance-dest"
+        />
+
+        <br />
+
+        <label for="final-balance-orig">Balance Final Original:</label>
+        <input
+          type="number"
+          id="final-balance-orig"
+          name="final-balance-orig"
+          readonly
+        />
+
+        <br />
+
+        <label for="final-balance-dest">Balance Final Destino:</label>
+        <input
+          type="number"
+          id="final-balance-dest"
+          name="final-balance-dest"
+          readonly
+        />
+
+        <br />
+
+        <input type="submit" value="Enviar" />
+      </form>
+
+      <div id="result"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
